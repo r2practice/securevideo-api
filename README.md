@@ -22,7 +22,10 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Config client
+    ```
+    Securevideo::Api.configure(KEY, SECRET)
+    ```
 
 ## Development
 
