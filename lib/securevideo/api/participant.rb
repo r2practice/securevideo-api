@@ -3,8 +3,10 @@ module Securevideo
     class Participant
       include Her::Model
       uses_api Securevideo::Api.api
-      collection_path "participant/:session_id"
-      attributes :session_id
+      collection_path "participant/:SessionId"
+      attributes :SessionId
+
+      validates :SessionId, presence: true
     end
   end
 end
