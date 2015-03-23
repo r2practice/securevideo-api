@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Maxim Pechnikov"]
   spec.email         = ["parallel588@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{API wrapper of securevideo.com}
+  spec.description   = %q{api}
+  spec.homepage      = "https://github.com/r2practice/securevideo-api"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }

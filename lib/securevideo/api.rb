@@ -19,6 +19,7 @@ module Securevideo
         end
         require "securevideo/api/user"
         require "securevideo/api/session"
+        require "securevideo/api/participant"
       end
 
       def api
