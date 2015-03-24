@@ -15,7 +15,7 @@ module Securevideo
 
       def update_password(new_password)
         res = self.class.put("password/#{id}", { "NewPassword" => new_password })
-        if res.Message.nil?
+        if !res.respond_to?(:Message) || res.Message.nil?
           Struct.new(:status).new(:ok)
         else
           Struct.new(:status, :message).new(:error, res.Message)
