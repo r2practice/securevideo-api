@@ -12,7 +12,7 @@ module Securevideo
       validates :Participants, presence: true
 
       def reschedule(schedule_ts)
-        self.class.put("session/#{id}", 'ScheduleTs': schedule_ts)
+        self.class.put("session/#{id}", { 'ScheduleTs' => schedule_ts })
       end
 
       def destroy
@@ -25,7 +25,7 @@ module Securevideo
         # @params month - 2014-01-01
         #
         def usage(month)
-          get('usage', month: month)
+          get('usage', { :month => month })
         end
 
         def login(user_id, redirect_to_on_expiry)

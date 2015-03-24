@@ -4,7 +4,7 @@ module Securevideo
       include Her::Model
       uses_api Securevideo::Api.api
       primary_key :SystemUserId
-      collection_path "user"
+      collection_path 'user'
 
       attributes :FullName, :EmailAddress, :TimeZoneWindowsId, :HelpNumber
       validates :FullName, presence: true
@@ -14,7 +14,7 @@ module Securevideo
 
 
       def update_password(new_password)
-        res = self.class.put("password/#{id}", "NewPassword": new_password)
+        res = self.class.put("password/#{id}", { "NewPassword" => new_password })
         if res.Message.nil?
           Struct.new(:status).new(:ok)
         else

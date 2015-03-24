@@ -9,7 +9,6 @@ module Securevideo
       validates :SessionId, presence: true
 
       class << self
-
         def add(session_id, participant_options = {})
           post("participant/#{session_id}", participant_options)
         end
