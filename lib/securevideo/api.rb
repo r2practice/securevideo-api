@@ -3,6 +3,7 @@ require 'faraday_middleware'
 require 'her'
 require "securevideo/api/version"
 require "securevideo/api/time_zones"
+require "securevideo/api/response"
 module Securevideo
   module Api
     class ClientNotConfigured < Exception; end

@@ -4,7 +4,7 @@ module Securevideo
       include Her::Model
       uses_api Securevideo::Api.api
       primary_key :SessionId
-      collection_path "session/:UserId"
+      collection_path 'session/:UserId'
 
       attributes :UserId, :ScheduleTs, :Participants
       validates :UserId, presence: true
@@ -12,15 +12,22 @@ module Securevideo
       validates :Participants, presence: true
 
       def reschedule(schedule_ts)
-        self.class.put("session/#{id}", { 'ScheduleTs' => schedule_ts })
+        self.class.reschedule(id, schedule_ts)
       end
 
       def destroy
-        self.class.delete("session/#{id}")
-        nil
+        self.class.cancel(id)
       end
 
       class << self
+        def cancel(session_id)
+          Response.new(delete("session/#{session_id}"))
+        end
+
+        def reschedule(session_id, schedule_ts)
+          Response.new(put("session/#{session_id}", 'ScheduleTs' => schedule_ts))
+        end
+
         #
         # @params month - 2014-01-01
         #
