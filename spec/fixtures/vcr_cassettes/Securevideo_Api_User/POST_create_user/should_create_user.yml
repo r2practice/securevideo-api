@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.securevideo.com/user
+    body:
+      encoding: UTF-8
+      string: '{"FullName":"Test User","TimeZoneWindowsId":"Pacific Standard Time","EmailAddress":"testuser@test.com","HelpNumber":"4084062331"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Authorization:
+      - Basic xxxxxx
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: ''
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/7.5
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Thu, 26 Mar 2015 09:08:56 GMT
+      Content-Length:
+      - '281'
+    body:
+      encoding: UTF-8
+      string: "{\r\n  \"SystemUserId\": \"12283\",\r\n  \"FullName\": \"Test User\",\r\n
+        \ \"EmailAddress\": \"testuser@test.com\",\r\n  \"SmsNumber\": \"\",\r\n  \"DefaultResolution\":
+        \"high\",\r\n  \"TimeZoneWindowsId\": \"Pacific Standard Time\",\r\n  \"HelpNumber\":
+        \"4084062331\",\r\n  \"VideoId\": \"securevideo+sv000001228327978610\"\r\n}"
+    http_version: 
+  recorded_at: Thu, 26 Mar 2015 09:08:57 GMT
+recorded_with: VCR 2.9.3

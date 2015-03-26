@@ -1,0 +1,127 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.securevideo.com/user/12283
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Authorization:
+      - Basic xxxx
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/7.5
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Thu, 26 Mar 2015 09:33:48 GMT
+      Content-Length:
+      - '284'
+    body:
+      encoding: UTF-8
+      string: "{\r\n  \"SystemUserId\": \"12283\",\r\n  \"FullName\": \"testUserName\",\r\n
+        \ \"EmailAddress\": \"testuser@test.com\",\r\n  \"SmsNumber\": \"\",\r\n  \"DefaultResolution\":
+        \"high\",\r\n  \"TimeZoneWindowsId\": \"Pacific Standard Time\",\r\n  \"HelpNumber\":
+        \"4084062331\",\r\n  \"VideoId\": \"securevideo+sv000001228327978610\"\r\n}"
+    http_version: 
+  recorded_at: Thu, 26 Mar 2015 09:33:49 GMT
+- request:
+    method: delete
+    uri: https://api.securevideo.com/user/12283
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Authorization:
+      - Basic xxxx
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 204
+      message: ''
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/7.5
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Thu, 26 Mar 2015 09:33:50 GMT
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Thu, 26 Mar 2015 09:33:51 GMT
+- request:
+    method: get
+    uri: https://api.securevideo.com/user/12283
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Authorization:
+      - Basic xxxx
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 404
+      message: ''
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/7.5
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Thu, 26 Mar 2015 09:33:50 GMT
+      Content-Length:
+      - '35'
+    body:
+      encoding: UTF-8
+      string: "{\r\n  \"Message\": \"User not found\"\r\n}"
+    http_version: 
+  recorded_at: Thu, 26 Mar 2015 09:33:52 GMT
+recorded_with: VCR 2.9.3
