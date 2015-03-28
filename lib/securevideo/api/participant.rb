@@ -10,11 +10,11 @@ module Securevideo
 
       class << self
         def add(session_id, participant_options = {})
-          post("participant/#{session_id}", participant_options)
+          Response.new(post("participant/#{session_id}", participant_options))
         end
 
         def remove(participant_id)
-          delete("participant/#{participant_id}")
+          Response.new(delete("participant/#{participant_id}"))
         end
       end
     end

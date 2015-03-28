@@ -1,8 +1,9 @@
 module Securevideo
   module Api
-    class Response
+    class Response < SimpleDelegator
       attr_reader :response
       def initialize(response)
+        super
         @response = response
       end
 
@@ -29,8 +30,9 @@ module Securevideo
       def to_s
         "status:#{status} message:#{success? ? '' : error_message}"
       end
+
       def inspect
-        "#{self.class.name} - #{to_s}"
+        "#{self.class.name} - #{self.to_s}"
       end
     end
   end

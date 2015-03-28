@@ -1,0 +1,118 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.securevideo.com/session/12281?UserId=12281
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Authorization:
+      - Basic ODM2NDk0M2ZkZTc4NDJkMzgwOTVhZGNmYTAyNDRlY2EyMGE5YTNhMTA4OWE0MGQzYjU1Zjk2ZGM4ODk5MDExODoyYTZhMzYyZDBlNGE0OGUxODRhZmRlY2FhMDc5NGVmNTM2NWJhMmFhYjc5ZjQ5ZDE4ZDRjNTQ0NDIxZWQ3OTQ1
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/7.5
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Sat, 28 Mar 2015 13:25:27 GMT
+      Content-Length:
+      - '1231'
+    body:
+      encoding: UTF-8
+      string: "[\r\n  {\r\n    \"SessionId\": 36208,\r\n    \"ScheduleTs\": \"2016-04-16T15:00:00\",\r\n
+        \   \"BillableTs\": null,\r\n    \"BillableStatusCd\": null,\r\n    \"UserId\":
+        12281,\r\n    \"IsRecorded\": false,\r\n    \"Participants\": [\r\n      {\r\n
+        \       \"ParticipationId\": 71896,\r\n        \"ParticipantFullName\": \"Test
+        User\",\r\n        \"SecureVideoUserId\": 12281,\r\n        \"ParticipantEmailAddress\":
+        \"test@test.com\",\r\n        \"ParticipantSmsNumber\": \"\",\r\n        \"ParticipantDefaultResolution\":
+        \"high\",\r\n        \"ParticipantTimeZoneWindowsId\": \"Pacific Standard
+        Time\",\r\n        \"ConnectCode\": 204848645,\r\n        \"ShouldAutoDeliverCode\":
+        \"E\",\r\n        \"ConnectionTs\": null,\r\n        \"ExpiresTs\": null,\r\n
+        \       \"RSVP\": \"Unknown\"\r\n      },\r\n      {\r\n        \"ParticipationId\":
+        71897,\r\n        \"ParticipantFullName\": \"Trevor\",\r\n        \"SecureVideoUserId\":
+        null,\r\n        \"ParticipantEmailAddress\": \"trevor@geemail.com\",\r\n
+        \       \"ParticipantSmsNumber\": \"3124455566\",\r\n        \"ParticipantDefaultResolution\":
+        \"default\",\r\n        \"ParticipantTimeZoneWindowsId\": \"Hawaiian Standard
+        Time\",\r\n        \"ConnectCode\": 207464714,\r\n        \"ShouldAutoDeliverCode\":
+        \"S\",\r\n        \"ConnectionTs\": null,\r\n        \"ExpiresTs\": null,\r\n
+        \       \"RSVP\": \"Unknown\"\r\n      }\r\n    ]\r\n  }\r\n]"
+    http_version: 
+  recorded_at: Sat, 28 Mar 2015 13:25:29 GMT
+- request:
+    method: put
+    uri: https://api.securevideo.com/session/36208
+    body:
+      encoding: UTF-8
+      string: '{"ScheduleTs":"2017-02-04T22:00:00"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Authorization:
+      - Basic ODM2NDk0M2ZkZTc4NDJkMzgwOTVhZGNmYTAyNDRlY2EyMGE5YTNhMTA4OWE0MGQzYjU1Zjk2ZGM4ODk5MDExODoyYTZhMzYyZDBlNGE0OGUxODRhZmRlY2FhMDc5NGVmNTM2NWJhMmFhYjc5ZjQ5ZDE4ZDRjNTQ0NDIxZWQ3OTQ1
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/7.5
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Sat, 28 Mar 2015 13:25:34 GMT
+      Content-Length:
+      - '1149'
+    body:
+      encoding: UTF-8
+      string: "{\r\n  \"SessionId\": 36208,\r\n  \"ScheduleTs\": \"2017-02-04T22:00:00\",\r\n
+        \ \"BillableTs\": null,\r\n  \"BillableStatusCd\": null,\r\n  \"UserId\":
+        12281,\r\n  \"IsRecorded\": false,\r\n  \"Participants\": [\r\n    {\r\n      \"ParticipationId\":
+        71896,\r\n      \"ParticipantFullName\": \"Test User\",\r\n      \"SecureVideoUserId\":
+        12281,\r\n      \"ParticipantEmailAddress\": \"test@test.com\",\r\n      \"ParticipantSmsNumber\":
+        \"\",\r\n      \"ParticipantDefaultResolution\": \"high\",\r\n      \"ParticipantTimeZoneWindowsId\":
+        \"Pacific Standard Time\",\r\n      \"ConnectCode\": 204848645,\r\n      \"ShouldAutoDeliverCode\":
+        \"E\",\r\n      \"ConnectionTs\": null,\r\n      \"ExpiresTs\": null,\r\n
+        \     \"RSVP\": \"Unknown\"\r\n    },\r\n    {\r\n      \"ParticipationId\":
+        71897,\r\n      \"ParticipantFullName\": \"Trevor\",\r\n      \"SecureVideoUserId\":
+        null,\r\n      \"ParticipantEmailAddress\": \"trevor@geemail.com\",\r\n      \"ParticipantSmsNumber\":
+        \"3124455566\",\r\n      \"ParticipantDefaultResolution\": \"default\",\r\n
+        \     \"ParticipantTimeZoneWindowsId\": \"Hawaiian Standard Time\",\r\n      \"ConnectCode\":
+        207464714,\r\n      \"ShouldAutoDeliverCode\": \"S\",\r\n      \"ConnectionTs\":
+        null,\r\n      \"ExpiresTs\": null,\r\n      \"RSVP\": \"Unknown\"\r\n    }\r\n
+        \ ]\r\n}"
+    http_version: 
+  recorded_at: Sat, 28 Mar 2015 13:25:36 GMT
+recorded_with: VCR 2.9.3
