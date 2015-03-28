@@ -27,6 +27,20 @@ require 'securevideo/api'
 Securevideo::Api.configure(KEY, SECRET)
 ```
 
+#### debug mode
+
+```ruby
+require 'securevideo/api'
+Securevideo::Api.configure(KEY, SECRET) do |config|
+  config.response :logger, ::Logger.new(STDOUT), { bodies: true }
+end
+```
+
+```bash
+EXCON_DEBUG=true [script].rb
+```
+
+
 ## API
 
 ### Users (https://hub.securevideo.com/Knowledge/Details/81)
